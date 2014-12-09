@@ -12,8 +12,8 @@ class BlogFacadeService implements BlogFacade {
 		try {
 			new BlogEntry(title: entry.title, content: entry.content, dateCreated: entry.dateCreated).save()
 		} catch (Exception e) {
-			println "保存失败"
-			throw new RuntimeException("保存失败")
+			println new String("保存失败".getBytes(),"utf-8")
+			throw new RuntimeException(new String("保存失败".getBytes(),"utf-8"))
         	}
 	}
 
