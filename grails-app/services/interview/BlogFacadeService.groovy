@@ -1,4 +1,4 @@
-package interview
+Ôªøpackage interview
 
 import com.lerss.ent.api.BlogFacade
 import com.lerss.ent.api.BlogEntryDTO
@@ -8,12 +8,12 @@ import grails.transaction.Transactional
 class BlogFacadeService implements BlogFacade {
 
 	@Override
-	void publish(BlogEntryDTO entry) { //≤∂ªÒ“Ï≥£
+	void publish(BlogEntryDTO entry) { //ÊçïËé∑ÂºÇÂ∏∏
 		try {
 			new BlogEntry(title: entry.title, content: entry.content, dateCreated: entry.dateCreated).save()
 		} catch (Exception e) {
-			println "±£¥Ê ß∞‹"
-			throw new RuntimeException("±£¥Ê ß∞‹")
+			println "‰øùÂ≠òÂ§±Ë¥•"
+			throw new RuntimeException("‰øùÂ≠òÂ§±Ë¥•")
         	}
 	}
 
